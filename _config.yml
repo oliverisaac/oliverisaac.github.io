@@ -18,8 +18,9 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: "Oliver Isaac: This Just. Might. Work."
+title: "Just. Might. Work."
 email: oisaac@gmail.com
+
 description: >-
   A collection ideas so crazy they just. might. work.
 
@@ -29,10 +30,21 @@ url: "https://oliverisaac.github.io" # the base hostname & protocol for your sit
 twitter_username: oisaac
 github_username:  oliverisaac
 
+paginate: 10
+permalink: "/:year/:month/:day/:title/"
+
+show_excerpts: true
+
 # Build settings
-theme: minima
+# remote_theme: mattvh/solar-theme-jekyll@1.0.0
+theme: jekyll-dash
 plugins:
   - jekyll-feed
+  - jekyll-remote-theme # add this line to the plugins list if you already have one
+  - jekyll-paginate
+  - jekyll/tagging
+  - liquid-md5
+
 
 # Exclude from processing.
 # The following items will not be processed, by default.
@@ -53,3 +65,31 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+ 
+
+# jekyll-paginate
+paginate: 5
+paginate_path: "/blog/page:num/"
+
+# jekyll-tagging (optional)
+tag_permalink_style: pretty
+tag_page_layout: tag_page
+tag_page_dir: tag
+
+dash:
+  date_format: "%Y-%m-%d"
+  avatar_source: github
+  github_username: oliverisaac
+
+  disqus:
+    shortname: <your-discuss-shortname>
+
+  # generate social links in footer
+  # supported colors: green, red, orange, blue, cyan, pink, teal, yellow, indigo, purple
+  social_links:
+    - url: https://twitter.com/oisaac
+      icon: twitter-square
+      color: cyan
+    - url: https://github.com/oliverisaac
+      icon: github-square
+      color: purple
