@@ -36,8 +36,8 @@ permalink: "/:year/:month/:day/:title/"
 show_excerpts: true
 
 # Build settings
-# remote_theme: mattvh/solar-theme-jekyll@1.0.0
-theme: jekyll-dash
+remote_theme: bitbrain/jekyll-dash
+  # theme: jekyll-dash
 plugins:
   - jekyll-feed
   - jekyll-remote-theme # add this line to the plugins list if you already have one
